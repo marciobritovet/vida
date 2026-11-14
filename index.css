@@ -1,0 +1,109 @@
+/* Modo de Alto Contraste — Acessibilidade (WCAG AAA) */
+html.high-contrast,
+html.high-contrast body {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+html.high-contrast .bg-indigo-canvas,
+html.high-contrast .bg-dot-grid {
+  background-color: #000000 !important;
+  background-image: none !important;
+}
+
+html.high-contrast .hc-hide-decor {
+  display: none !important;
+}
+
+/* Superfícies estruturais com bordas nítidas */
+html.high-contrast [class*="bg-zinc-9"],
+html.high-contrast [class*="bg-[#0"],
+html.high-contrast [class*="bg-[#1"],
+html.high-contrast [class*="bg-[#2"] {
+  background-color: #000000 !important;
+}
+
+html.high-contrast [class*="bg-zinc-8"] {
+  background-color: #141414 !important;
+}
+
+html.high-contrast [class*="border-zinc-"],
+html.high-contrast [class*="border-white"],
+html.high-contrast [class*="border-indigo-"] {
+  border-color: #ffffff !important;
+}
+
+/* Elevação de contraste para textos secundários e metadados */
+html.high-contrast .text-zinc-300,
+html.high-contrast .text-zinc-400,
+html.high-contrast .text-zinc-500,
+html.high-contrast .text-zinc-600,
+html.high-contrast [class*="text-indigo-"] {
+  color: #f4f4f5 !important;
+}
+
+/* Destaque de ações primárias e abas ativas */
+html.high-contrast .bg-blue-600,
+html.high-contrast .bg-blue-500,
+html.high-contrast .bg-\[\#ec1163\] {
+  background-color: #fde047 !important;
+  color: #000000 !important;
+  border: 2px solid #ffffff !important;
+  box-shadow: none !important;
+}
+
+html.high-contrast .bg-blue-600 *,
+html.high-contrast .bg-blue-500 *,
+html.high-contrast .bg-\[\#ec1163\] * {
+  color: #000000 !important;
+}
+
+html.high-contrast .text-blue-400,
+html.high-contrast .text-blue-500,
+html.high-contrast .text-\[\#fbbf24\],
+html.high-contrast .text-\[\#38bdf8\] {
+  color: #fde047 !important;
+}
+
+html.high-contrast .decoration-blue-500,
+html.high-contrast .decoration-\[\#ec1163\],
+html.high-contrast .border-blue-500,
+html.high-contrast [class*="border-blue-500"],
+html.high-contrast [class*="border-[#fbbf24]"],
+html.high-contrast [class*="border-[#38bdf8]"] {
+  border-color: #fde047 !important;
+  text-decoration-color: #fde047 !important;
+}
+
+/* Campos de texto e placeholders */
+html.high-contrast input,
+html.high-contrast textarea,
+html.high-contrast select {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border: 2px solid #ffffff !important;
+}
+
+html.high-contrast input::placeholder,
+html.high-contrast textarea::placeholder {
+  color: #d4d4d8 !important;
+  opacity: 1 !important;
+}
+
+/* Links e estados de foco visíveis */
+html.high-contrast a {
+  color: #fde047 !important;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+html.high-contrast button:focus-visible,
+html.high-contrast a:focus-visible,
+html.high-contrast input:focus-visible,
+html.high-contrast textarea:focus-visible,
+html.high-contrast select:focus-visible,
+html.high-contrast [role="button"]:focus-visible,
+html.high-contrast [role="switch"]:focus-visible {
+  outline: 3px solid #fde047 !important;
+  outline-offset: 2px !important;
+}

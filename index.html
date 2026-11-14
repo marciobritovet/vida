@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VIVA LA VIDA — Dê vida a qualquer coisa</title>
+    <meta name="description" content="Envie a imagem de um jogo de tabuleiro, planta baixa ou qualquer coisa que imaginar para transformar em uma experiência interativa." />
+    <meta property="og:title" content="VIVA LA VIDA — Dê vida a qualquer coisa" />
+    <meta property="og:description" content="Envie a imagem de um jogo de tabuleiro, planta baixa ou qualquer coisa que imaginar para transformar em uma experiência interativa." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- PDF.js for rendering PDF previews -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script>
+      if (window.pdfjsLib) {
+        window.pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+      }
+    </script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
+      
+      body {
+        font-family: 'DM Sans', sans-serif;
+        background-color: #100833;
+        color: #fafafa;
+      }
+
+      h1, h2, h3, h4, .font-display {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+      }
+
+      .font-mono {
+        font-family: 'JetBrains Mono', monospace;
+        font-variant-numeric: tabular-nums;
+      }
+
+      .bg-indigo-canvas {
+        background: radial-gradient(circle at 20% 15%, rgba(67, 24, 209, 0.38), transparent 45%),
+                    radial-gradient(circle at 82% 80%, rgba(200, 17, 111, 0.32), transparent 48%),
+                    linear-gradient(160deg, #100833 0%, #190d4a 55%, #0e062c 100%);
+      }
+
+      /* Smooth scrolling for the whole app */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      @keyframes spin-slow {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+
+      .animate-spin-slow {
+        animation: spin-slow 4s linear infinite;
+      }
+
+      @keyframes loading {
+        0% { transform: translateX(-100%); }
+        50% { transform: translateX(150%); }
+        100% { transform: translateX(300%); }
+      }
+    </style>
+    <link rel="stylesheet" href="/index.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
